@@ -29,4 +29,22 @@ class ListaSE:
 			return
 		else:
 			nuevo_nodo.siguiente = self.cabeza
+
 			self.cabeza = nuevo_nodo
+			
+	# Insertar al final
+	def insertarFinal(self, data):
+		nuevo_nodo = Nodo(data)
+
+		
+		if self.cabeza is None:
+			self.cabeza = nuevo_nodo
+			return
+
+		
+		actual = self.cabeza
+		while actual.siguiente is not None:
+			actual = actual.siguiente
+
+		
+		actual.siguiente = nuevo_nodo
